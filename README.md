@@ -1,5 +1,5 @@
 # Data-Analytics-Pathway-Assessment
-This project centers on analyzing a bank marketing dataset to determine whether a customer will subscribe to a term deposit based on various demographic and campaign-related features. The dataset originates from direct marketing campaigns conducted by a Portuguese bank. By exploring patterns and trends in the data, the goal is to uncover key factors influencing customer decisions and support future targeting strategies.
+This project centers on analyzing a bank marketing dataset to determine whether a customer will subscribe to a term deposit based on various demographic and campaign-related features. The dataset originates from direct marketing campaigns conducted by a Portuguese bank. By analyzing patterns and trends in the data, the goal is to identify key factors that influence customer decisions and inform future targeting strategies.
 
 ## Objectives
 - Understand the structure and characteristics of the dataset
