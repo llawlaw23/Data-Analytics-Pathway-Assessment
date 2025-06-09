@@ -25,7 +25,7 @@ def preprocess_input(data):
 
     return data[model.feature_names_in_]
 
-st.title("📊 Bank Term Deposit Subscription Predictor")
+st.title("Bank Term Deposit Subscription Predictor")
 st.write("Fill in the customer information:")
 
 with st.form("input_form"):
