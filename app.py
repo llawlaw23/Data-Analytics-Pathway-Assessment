@@ -5,8 +5,8 @@ import joblib
 model = joblib.load("model.pkl")
 
 month_to_nv = {
-    "jan": 1, "feb": 2, "mar": 3, "apr": 4, "may": 5, "jun": 6,
-    "jul": 7, "aug": 8, "sep": 9, "oct": 10, "nov": 11, "dec": 12
+    "Jan": 1, "Feb": 2, "Mar": 3, "Apr": 4, "May": 5, "Jun": 6,
+    "Jul": 7, "Aug": 8, "Sep": 9, "Oct": 10, "Nov": 11, "Dec": 12
 }
 
 def preprocess_input(data):
@@ -25,7 +25,7 @@ def preprocess_input(data):
     return data[model.feature_names_in_]
 
 st.title("Bank Term Deposit Subscription Predictor")
-st.write("Fill in the customer information:")
+st.write("Fill in customer information:")
 
 with st.form("input_form"):
     age = st.slider("Age", 15, 90, 35)
