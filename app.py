@@ -30,7 +30,7 @@ st.write("Fill in customer information:")
 with st.form("input_form"):
     age = st.slider("Age", 15, 90, 35)
     housing = st.selectbox("Has housing loan?", ["NO", "YES"])
-    housing = st.selectbox("Marital Status?", ["SINGLE", "MARRIED", "DIVORCED"])
+    marital = st.selectbox("Marital Status?", ["SINGLE", "MARRIED", "DIVORCED"])
     loan = st.selectbox("Has personal loan?", ["NO", "YES"])
     month = st.selectbox("Last contact month", list(month_to_nv.keys()))
     duration = st.number_input("Call duration (seconds)", min_value=0, value=100)
@@ -40,6 +40,7 @@ with st.form("input_form"):
 if submitted:
     input_df = pd.DataFrame([{
         "age": age,
+        "marital": marital,
         "housing": housing,
         "loan": loan,
         "month": month,
