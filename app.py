@@ -10,11 +10,11 @@ month_to_nv = {
 }
 
 def preprocess_input(data):
-    binary_cols = ['default', 'housing', 'loan']
+    binary_cols = ["HOUSING", "LOAN"]
     for col in binary_cols:
-        data[col] = data[col].map({'yes': 1, 'no': 0})
+        data[col] = data[col].map({"YES": 1, "NO": 0})
     
-    data['month'] = data['month'].map(month_to_nv)
+    data["month"] = data["month"].map(month_to_nv)
 
     data = pd.get_dummies(data, drop_first=True)
 
@@ -29,9 +29,8 @@ st.write("Fill in customer information:")
 
 with st.form("input_form"):
     age = st.slider("Age", 15, 90, 35)
-    default = st.selectbox("Has credit in default?", ["no", "yes"])
-    housing = st.selectbox("Has housing loan?", ["no", "yes"])
-    loan = st.selectbox("Has personal loan?", ["no", "yes"])
+    housing = st.selectbox("Has housing loan?", ["NO", "YES"])
+    loan = st.selectbox("Has personal loan?", ["NO", "YES"])
     month = st.selectbox("Last contact month", list(month_to_nv.keys()))
     duration = st.number_input("Call duration (seconds)", min_value=0, value=100)
 
