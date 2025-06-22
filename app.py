@@ -40,7 +40,6 @@ with st.form("input_form"):
 if submitted:
     input_df = pd.DataFrame([{
         "age": age,
-        "default": default,
         "housing": housing,
         "loan": loan,
         "month": month,
